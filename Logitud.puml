@@ -1,0 +1,50 @@
+@startuml
+
+class Participant{
+    -id:int
+    -nom:string
+    -prenom:string
+    -dateDeNaiss:date
+    -mail:string
+    -photo:string
+    +addParticipant()
+    +updateParticipant()
+    +deleteParticipant()
+
+}
+class Categorie {
+    -id:int
+    -nom:string
+    +addCategorie()
+}
+
+class Epreuve {
+    -id:int
+    -lieu:string
+    -date:date
+    +addEpreuve()
+    +updateEpreuve()
+    +deleteEpreuve()
+}
+
+class Profil {
+    -id:int
+    -nom:string
+    +addProfil()
+}
+
+class Passage {
+    -id:int
+    -numPassage:int
+    -tempsPassage:time
+}
+
+'les relations entre les entités
+
+Participant "many" o-- "many" Epreuve
+Participant "many" o-- "one" Profil
+Participant "many" o-- "one" Categorie
+Participant "one" o-- "many" Passage
+Epreuve "one" *-- "many" Passage
+
+@enduml
