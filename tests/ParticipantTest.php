@@ -13,24 +13,24 @@ it('test ajout participant', function ()
 
 it('test vérifier le nom du participant', function ()
 {
-    $this->expectException(\InvalidArgumentException::class);
-    $name = new Participant();
-    $name->setNom("Mohamed233");
+        $this->expectException(\InvalidArgumentException::class);
+        $name = new Participant();
+        $name->setNom("Mohamed233");
 
 });
 
 it('test ajouter un profil', function ()
 {
-    $prof = new Participant();
-    $prof->setProfil("ASVP");
-    $this->assertSame("ASVP",$prof->getProfil());
+        $prof = new Participant();
+        $prof->setProfil("ASVP");
+        $this->assertSame("ASVP",$prof->getProfil());
 
 });
 
 it('test vérifier le profil du particiapnt', function()
 {
-    $this->expectException(\InvalidArgumentException::class);
-    $prof =  new Participant();
-    $prof->setProfil("GENDARME");
+        $this->expectException(\InvalidArgumentException::class);
+        $prof =  new Participant();
+        $prof->setProfil("GENDARME");
 
 });
