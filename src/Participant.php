@@ -110,6 +110,10 @@ class Participant
      */
     public function setMail($mail)
     {
+        if(filter_var($mail, FILTER_VALIDATE_EMAIL)){
+
+            throw new \InvalidArgumentException('adresse pas valide');
+        }
         $this->mail = $mail;
     }
 

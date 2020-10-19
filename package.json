@@ -1,0 +1,25 @@
+{
+  "name": "logitudcode",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mkayz68/logitud.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mkayz68/logitud/issues"
+  },
+  "homepage": "https://github.com/mkayz68/logitud#readme",
+  "dependencies": {
+    "bootstrap": "^4.5.3"
+  }
+}

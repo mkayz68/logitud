@@ -34,3 +34,19 @@ it('test vérifier le profil du particiapnt', function()
         $prof->setProfil("GENDARME");
 
 });
+
+it('vérifier le prénom du participant', function ()
+{
+    $this->expectException(\InvalidArgumentException::class);
+    $prenom = new Participant();
+    $prenom->setPrenom('Paul2');
+
+});
+
+it('test adresse mail participant', function ()
+{
+    $this->expectException(\InvalidArgumentException::class);
+    $mail = new Participant();
+    $mail->setMail('m.kaizerli@gmail.com');
+
+});
