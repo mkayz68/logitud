@@ -11,7 +11,7 @@
 //    +deleteParticipant()
 
 
-namespace App;
+namespace App\Entity;
 
 
 class Participant

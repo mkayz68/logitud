@@ -1,6 +1,6 @@
 <?php
 
-use App\Participant;
+use App\Entity\Participant;
 
 
 it('test ajout participant', function ()

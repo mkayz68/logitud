@@ -5,7 +5,7 @@
 //    +addProfil()
 
 
-namespace App;
+namespace App\Entity;
 
 
 class Profil

@@ -4,7 +4,7 @@
 //    -nom:string
 //    +addCategorie()
 
-namespace App;
+namespace App\Entity;
 
 
 class Categorie

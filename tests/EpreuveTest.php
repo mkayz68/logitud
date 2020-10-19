@@ -1,6 +1,6 @@
 <?php
 
-use App\Epreuve;
+use App\Entity\Epreuve;
 
 it('ajouter une épreuve', function ()
 {

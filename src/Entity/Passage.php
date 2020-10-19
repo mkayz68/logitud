@@ -4,7 +4,7 @@
 //    -numPassage:int
 //    -tempsPassage:time
 
-namespace App;
+namespace App\Entity;
 
 
 class Passage

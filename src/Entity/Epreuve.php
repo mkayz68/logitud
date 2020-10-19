@@ -9,7 +9,7 @@
 
 
 
-namespace App;
+namespace App\Entity;
 
 
 class Epreuve

@@ -1,14 +1,12 @@
 <?php
 
-use App\Passage;
+use App\Entity\Passage;
 
 it('test Passage', function()
 {
     $numPassage = new Passage();
     $numPassage->setNumPassage(2);
-
     $this->assertSame(2, $numPassage->getNumPassage());
-
 });
 
 
@@ -20,11 +18,22 @@ it('nombre négatif', function ()
 });
 
 
-// j'ai une erreur pour le format du temps qui me mets null dans le setPassage
-/*it('temps du passage', function ()
+// fonctionne pas celui-là
+it('temps du passage', function ()
 {
     $timePassage = new Passage();
-    $timePassage->setTempsPassage('1.23.90');
+    $timePassage->setTempsPassage('i:s,u');
     $this->assertSame(0, $timePassage->getTempsPassage());
+});
 
-});*/
+
+
+/*it('verified type of Time of passage', function($time){
+    $timeStage = DateTime::createFromFormat('i:s.u', $time);
+    $result = $this->passage->SetTempDePassage($time);
+    $this->expect($result->getTempDePassage())->toEqual($timeStage);
+})->with('TimePassage');
+
+it('test Exception Set Time',function($time) {
+    $this->passage->SetTempDePassage($time);
+})->with('TimePassageEx')->throws(Exception::class);*/
