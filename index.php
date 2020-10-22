@@ -13,13 +13,14 @@ require __DIR__.'/vendor/autoload.php';
 
 // httpfoundation
 $request = Request::createFromGlobals();
-dump($request);
+//dump($request);
 
 
 // MON ROUTER
 $dispatcher = FastRoute\simpleDispatcher(function(FastRoute\RouteCollector $r) {
-    $r->addRoute('GET', '/Home', [new HomeController(), 'function1']);
+    $r->addRoute('GET', '/Home', [new HomeController(), 'TwigTest']);
     $r->addRoute('GET', '/Epreuve/{lieu}/{date}', [new EpreuvesController(), 'AddEpreuve']);
+    $r->addRoute('GET', '/Epreuve', [new EpreuvesController(), 'AddEpreuve']);
     // {id} must be a number (\d+)
     //$r->addRoute('GET', '/user/{id:\d+}', 'get_user_handler');
 
@@ -42,12 +43,12 @@ $routeInfo = $dispatcher->dispatch($request->getMethod(), $request->getPathInfo(
 switch ($routeInfo[0]) {
     case FastRoute\Dispatcher::NOT_FOUND:
         // ... 404 Not Found
-        echo 'La page Pas trouvée';
+        echo 'La page n\'est pas trouvée';
         break;
     case FastRoute\Dispatcher::METHOD_NOT_ALLOWED:
         $allowedMethods = $routeInfo[1];
         // ... 405 Method Not Allowed
-        echo 'La méthode pas existane';
+        echo 'La méthode n\'existe pas';
         break;
     case FastRoute\Dispatcher::FOUND:
         $handler = $routeInfo[1];
@@ -59,7 +60,15 @@ switch ($routeInfo[0]) {
 }
 
 // TWIG
-$loader = new Twig_Loader_Filesystem(__DIR__. '/src/Views/templates');
+/*
+$loader = new \Twig\Loader\ArrayLoader([
+    'index' => 'Bonjour {{ name }}!',
+]);
+$twig = new \Twig\Environment($loader);*/
+
+
+
+/*$loader = new Twig_Loader_Filesystem(__DIR__. '/src/Views/templates');
 $twig = new Twig_Environment($loader, [
     'cache' => __DIR__. '/src/templates/cache'
-]);
+]);*/

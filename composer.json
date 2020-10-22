@@ -17,7 +17,7 @@
     "require": {
         "spatie/phpunit-watcher": "^1.22",
         "symfony/http-foundation": "^5.1",
-        "twig/twig": "^2.0",
+        "twig/twig": "3.0",
         "doctrine/annotations": "^1.10",
         "symfony/config": "^5.1",
         "nesbot/carbon": "^2.41",
