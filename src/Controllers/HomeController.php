@@ -14,6 +14,6 @@ class HomeController
     {
         $twigtest = new ConfigTwig();
         echo $twigtest->twig->render('index.html.twig');
-        dump($twigtest);
+        //dump($twigtest);
     }
 }

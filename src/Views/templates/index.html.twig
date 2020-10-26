@@ -1,7 +1,17 @@
-{% extends 'home.html.twig' %}
+{# j'extends le fichier de base  #}
+{% extends 'base.html.twig' %}
 
+{# ce bloc va servir à renommer la balise title  #}
 {% block title %}Accueil{% endblock %}
 
+{# ici sera mon contenu #}
 {% block body %}
-    <p>Ajouter une épreuve</p>
+
 {% endblock %}
+
+
+{# dans ce block sera excuter mon javascript #}
+{% block javascripts %}
+    {#<script type="text/javascript">window.alert('bonjour');</script>#}
+{% endblock %}
+

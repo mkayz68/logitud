@@ -15,6 +15,14 @@ require __DIR__.'/vendor/autoload.php';
 $request = Request::createFromGlobals();
 //dump($request);
 
+//
+try {
+    $db = new PDO('mysql:host=localhost;dbname=logitud', 'root', 'root');
+} catch (PDOException $e) {
+    echo $e->getMessage();
+}
+//
+
 
 // MON ROUTER
 $dispatcher = FastRoute\simpleDispatcher(function(FastRoute\RouteCollector $r) {
