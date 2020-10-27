@@ -3,5 +3,44 @@
 {% block title %}Epreuve{% endblock %}
 
 {% block body %}
-
+    <div class=" contenu container-fluid">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <select class="custom-select">
+                        <option selected>Séléctionner une épreuve</option>
+                        <option value="1">Ski</option>
+                        <option value="2">Ski de fond</option>
+                        <option value="3">Ski de bosse</option>
+                    </select>
+                </div>
+                <div class="col-md-6">
+                    <a href="#form_add_epreuve" ><button type="button" class="btn btn-success">Ajouter une épreuve</button></a>
+                </div>
+                <div class="col-md-6">
+                <fieldset class="scheduler-border" id="form_add_epreuve">
+                    <legend class="scheduler-border">nom de l'épreuve</legend>
+                    <div class="control-group">
+                        <label class="control-label input-label label_epreuve" for="lieu">Lieu :</label>
+                        <div class="controls bootstrap-timepicker">
+                            <input type="text"  id="lieu" name="lieu" placeholder="Lieu de l'épreuve" />
+{#                            <i class="icon-time"></i>#}
+                        </div>
+                        <div class="control-group">
+                            <label class="control-label input-label label_epreuve" for="date">Date :
+                            </label>
+                            <div class="controls bootstrap-timepicker">
+                                <input type="date"  id="date" name="date" placeholder="Lieu de l'épreuve" />
+                                {# <i class="icon-time"></i>#}
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+                </div>
+                <div class="col-md-6 ajoutParticipantButton">
+                    <a href="http://localhost:8000/Participant"><button type="button" class="btn btn-success">Ajouter un participant</button></a>
+                </div>
+            </div><!-- /row -->
+        </div>
+    </div>
 {% endblock %}

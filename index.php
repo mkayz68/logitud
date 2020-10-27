@@ -1,9 +1,11 @@
 <?php
 
 
+use App\Controllers\CategorieController;
 use App\Controllers\EpreuvesController;
 use App\Controllers\HomeController;
-
+use App\Controllers\ParticipantController;
+use App\Models\DataBase;
 use Symfony\Component\HttpFoundation\Request;
 
 // charger mes class
@@ -16,12 +18,10 @@ $request = Request::createFromGlobals();
 //dump($request);
 
 //
-try {
-    $db = new PDO('mysql:host=localhost;dbname=logitud', 'root', 'root');
-} catch (PDOException $e) {
-    echo $e->getMessage();
-}
-//
+
+$object = new DataBase;
+$object->connect();
+
 
 
 // MON ROUTER
@@ -29,6 +29,9 @@ $dispatcher = FastRoute\simpleDispatcher(function(FastRoute\RouteCollector $r) {
     $r->addRoute('GET', '/Home', [new HomeController(), 'TwigTest']);
     $r->addRoute('GET', '/Epreuve/{lieu}/{date}', [new EpreuvesController(), 'AddEpreuve']);
     $r->addRoute('GET', '/Epreuve', [new EpreuvesController(), 'AddEpreuve']);
+    $r->addRoute('GET', '/Participant', [new ParticipantController(), 'addParticipant']);
+    $r->addRoute('POST', '/Participant', [new ParticipantController(), 'fetchParticipant']);
+    $r->addRoute('GET', '/Categorie', [new CategorieController(), 'addCategorie']);
     // {id} must be a number (\d+)
     //$r->addRoute('GET', '/user/{id:\d+}', 'get_user_handler');
 
@@ -36,16 +39,6 @@ $dispatcher = FastRoute\simpleDispatcher(function(FastRoute\RouteCollector $r) {
     //$r->addRoute('GET', '/articles/{id:\d+}[/{title}]', 'get_article_handler');
 });
 
-/*// Fetch method and URI from somewhere
-$httpMethod = $_SERVER['REQUEST_METHOD'];
-$uri = $_SERVER['REQUEST_URI'];
-
-
-// Strip query string (?foo=bar) and decode URI
-if (false !== $pos = strpos($uri, '?')) {
-    $uri = substr($uri, 0, $pos);
-}
-$uri = rawurldecode($uri);*/
 
 $routeInfo = $dispatcher->dispatch($request->getMethod(), $request->getPathInfo());
 switch ($routeInfo[0]) {
@@ -66,17 +59,3 @@ switch ($routeInfo[0]) {
         call_user_func_array($handler, [$request]);
         break;
 }
-
-// TWIG
-/*
-$loader = new \Twig\Loader\ArrayLoader([
-    'index' => 'Bonjour {{ name }}!',
-]);
-$twig = new \Twig\Environment($loader);*/
-
-
-
-/*$loader = new Twig_Loader_Filesystem(__DIR__. '/src/Views/templates');
-$twig = new Twig_Environment($loader, [
-    'cache' => __DIR__. '/src/templates/cache'
-]);*/

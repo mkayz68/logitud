@@ -10,16 +10,9 @@ class EpreuvesController
     {
         $twigtest = new ConfigTwig();
         echo $twigtest->twig->render('epreuves.html.twig');
-        //dump($twigtest);
-
-        //echo ('AddEpreuve');
-        //dump($request);
 
     }
-   /* public function function2()
-    {
-        echo('function2');
-    }*/
+
 
 
 }

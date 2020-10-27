@@ -1,0 +1,98 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Participant{% endblock %}
+
+{% block body %}
+    <div class="container-fluid">
+       <div class="bloc_text">
+            <!-- ICI DOIT RETROUVER LE NOM DE LEPREUVE PRECEDDEMENRT SELECTIONNER -->
+       </div>
+
+        <div class="container form-participant">
+
+            <!-- FORMULAIRE -->
+            <form method="post" action="">
+                <div class="form-group">
+                    <label for="image">Ajouter une photo</label>
+                    <input type="file" class="form-control" name="photo" id="image1"> <!-- aria-describedby="emailHelp" -->
+                    {#<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>#}
+                </div>
+                <div class="form-group">
+                    {#                    <label for="prenom"></label>#}
+                    <input type="text" class="form-control" id="nom" name="nom" placeholder="Nom du participant">
+                </div>
+                <div class="form-group">
+                    {#                    <label for="prenom"></label>#}
+                    <input type="text" class="form-control" id="prenom" name="prenom" placeholder="Prenom du participant">
+                </div>
+                <div class="form-group">
+                    {#                    <label for="prenom"></label>#}
+                    <input type="email" class="form-control" id="email" name="email" placeholder="Email du participant">
+                </div>
+                <div class="form-group">
+                    {#  <label for="date">Date de naissance</label> #}
+                    <input type="date" class="form-control" id="date" name="date" placeholder="Date" />
+
+                </div>
+
+
+            <!-- DIVISION-->
+            <div class="division">
+                <h5>DIVISION</h5>
+                <div class="form-group form-check m1">
+                    <input type="checkbox" class="form-check-input" name="choix" id="m1">
+                    <label class="form-check-label" for="exampleCheck1">M1</label>
+                </div>
+                <div class="form-group form-check m2">
+                    <input type="checkbox" class="form-check-input" name="choix" id="m2">
+                    <label class="form-check-label" for="exampleCheck1">M2</label>
+                </div>
+                <div class="form-group form-check m3">
+                    <input type="checkbox" class="form-check-input" name="choix" id="m3">
+                    <label class="form-check-label" for="exampleCheck1">M3</label>
+                </div>
+                <div class="form-group form-check senior">
+                    <input type="checkbox" class="form-check-input" name="choix" id="senior">
+                    <label class="form-check-label" for="exampleCheck1">SENIOR</label>
+                </div>
+                <div class="form-group form-check v">
+                    <input type="checkbox" class="form-check-input" name="choix" id="v">
+                    <label class="form-check-label" for="exampleCheck1">V</label>
+                </div>
+                <div class="form-group form-check snow">
+                    <input type="checkbox" class="form-check-input" name="choix" id="snow">
+                    <label class="form-check-label" for="exampleCheck1">SNOW</label>
+                </div>
+                <a href="http://localhost:8000/Categorie">
+                    <button type="button" class="btn btn-success">Ajouter une catégorie</button>
+                </a>
+            </div>
+
+            <!-- PROFIL -->
+            <div class="profil">
+                <h5>PROFIL</h5>
+                <div class="form-group form-check">
+                    <input type="checkbox" class="form-check-input" name="choix1" id="asvp">
+                    <label class="form-check-label" for="exampleCheck1">ASVP</label>
+                </div>
+                <div class="form-group form-check">
+                    <input type="checkbox" class="form-check-input" name="choix1" id="open">
+                    <label class="form-check-label" for="exampleCheck1">OPEN</label>
+                </div>
+                <div class="form-group form-check">
+                    <input type="checkbox" class="form-check-input" name="choix1" id="garde">
+                    <label class="form-check-label" for="exampleCheck1">GARDES-CHAMPETRES</label>
+                </div>
+            </div>
+
+            <button type="submit" name="submit" value="submit" class="btn btn-success">Enregister</button>
+            </form>
+        </div><!-- /container -->
+
+    </div><!-- /container-fluid -->
+{% endblock %}
+
+
+
+
+
