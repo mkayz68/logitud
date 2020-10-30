@@ -22,7 +22,16 @@ class Participant
     private $dateDeNaiss;
     private $mail;
     private $photo;
-    private $profil;
+    private $profilId;
+    protected $categorieId;
+
+    /**
+     * @return mixed
+     */
+    public function getCategorieId()
+    {
+        return $this->categorieId;
+    }
 
 
     /**
@@ -155,10 +164,13 @@ class Participant
         }
     }
 
-
-
-
-
+    /**
+     * @return mixed
+     */
+    public function getProfilId()
+    {
+        return $this->profilId;
+    }
 
 
 }

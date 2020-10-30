@@ -757,143 +757,159 @@ SELECT|sys.sys_config:null
     <table id="234" parent="3" name="epreuve">
       <Collation>utf8mb4_general_ci</Collation>
     </table>
-    <table id="235" parent="3" name="particpant">
+    <table id="235" parent="3" name="parti"/>
+    <table id="236" parent="3" name="participant">
       <Collation>utf8mb4_general_ci</Collation>
     </table>
-    <table id="236" parent="3" name="passage">
+    <table id="237" parent="3" name="passage">
       <Collation>utf8mb4_general_ci</Collation>
     </table>
-    <table id="237" parent="3" name="profil">
+    <table id="238" parent="3" name="profil">
       <Collation>utf8mb4_general_ci</Collation>
     </table>
-    <column id="238" parent="233" name="id">
+    <column id="239" parent="233" name="id">
       <Position>1</Position>
       <DataType>int(11) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="239" parent="233" name="nom">
+    <column id="240" parent="233" name="nom">
       <Position>2</Position>
       <DataType>varchar(11)|0s</DataType>
     </column>
-    <key id="240" parent="233" name="PRIMARY">
+    <key id="241" parent="233" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="241" parent="234" name="id">
+    <column id="242" parent="234" name="id">
       <Position>1</Position>
       <DataType>int(11) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="242" parent="234" name="lieu">
+    <column id="243" parent="234" name="lieu">
       <Position>2</Position>
       <DataType>varchar(11)|0s</DataType>
     </column>
-    <column id="243" parent="234" name="date">
+    <column id="244" parent="234" name="date">
       <Position>3</Position>
       <DataType>datetime|0s</DataType>
     </column>
-    <key id="244" parent="234" name="PRIMARY">
+    <key id="245" parent="234" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="245" parent="235" name="id">
+    <column id="246" parent="235" name="id">
       <Position>1</Position>
       <DataType>int(11) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="246" parent="235" name="nom">
+    <column id="247" parent="235" name="nom">
+      <Position>2</Position>
+      <DataType>varchar(255)|0s</DataType>
+    </column>
+    <key id="248" parent="235" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="249" parent="236" name="id">
+      <Position>1</Position>
+      <DataType>int(11) unsigned|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>null</SequenceIdentity>
+    </column>
+    <column id="250" parent="236" name="nom">
       <Position>2</Position>
       <DataType>varchar(11)|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
     </column>
-    <column id="247" parent="235" name="prenom">
+    <column id="251" parent="236" name="prenom">
       <Position>3</Position>
       <DataType>varchar(11)|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
     </column>
-    <column id="248" parent="235" name="dateDeNaiss">
+    <column id="252" parent="236" name="dateDeNaiss">
       <Position>4</Position>
       <DataType>date|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="249" parent="235" name="mail">
+    <column id="253" parent="236" name="mail">
       <Position>5</Position>
       <DataType>varchar(11)|0s</DataType>
     </column>
-    <column id="250" parent="235" name="photo">
+    <column id="254" parent="236" name="photo">
       <Position>6</Position>
       <DataType>longblob|0s</DataType>
     </column>
-    <column id="251" parent="235" name="profil_id">
+    <column id="255" parent="236" name="profil_id">
       <Position>7</Position>
       <DataType>int(11) unsigned|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="252" parent="235" name="categorie_id">
+    <column id="256" parent="236" name="categorie_id">
       <Position>8</Position>
       <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="253" parent="235" name="profil_id">
+    <index id="257" parent="236" name="profil_id">
       <ColNames>profil_id</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="254" parent="235" name="categorie_id">
+    <index id="258" parent="236" name="categorie_id">
       <ColNames>categorie_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="255" parent="235" name="PRIMARY">
+    <key id="259" parent="236" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="256" parent="235" name="particpant_ibfk_1">
+    <foreign-key id="260" parent="236" name="participant_ibfk_1">
       <ColNames>profil_id</ColNames>
-      <RefTableName>particpant</RefTableName>
+      <RefTableName>participant</RefTableName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <foreign-key id="257" parent="235" name="particpant_ibfk_2">
+    <foreign-key id="261" parent="236" name="participant_ibfk_2">
       <ColNames>categorie_id</ColNames>
       <RefTableName>categorie</RefTableName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <column id="258" parent="236" name="id">
-      <Position>1</Position>
-      <DataType>int(11) unsigned|0s</DataType>
-      <NotNull>1</NotNull>
-      <SequenceIdentity>null</SequenceIdentity>
-    </column>
-    <column id="259" parent="236" name="num_passage">
-      <Position>2</Position>
-      <DataType>int(11)|0s</DataType>
-    </column>
-    <column id="260" parent="236" name="temps_passage">
-      <Position>3</Position>
-      <DataType>int(11)|0s</DataType>
-    </column>
-    <key id="261" parent="236" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
-      <ColNames>id</ColNames>
-      <Primary>1</Primary>
-    </key>
     <column id="262" parent="237" name="id">
       <Position>1</Position>
       <DataType>int(11) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="263" parent="237" name="nom">
+    <column id="263" parent="237" name="num_passage">
+      <Position>2</Position>
+      <DataType>int(11)|0s</DataType>
+    </column>
+    <column id="264" parent="237" name="temps_passage">
+      <Position>3</Position>
+      <DataType>int(11)|0s</DataType>
+    </column>
+    <key id="265" parent="237" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="266" parent="238" name="id">
+      <Position>1</Position>
+      <DataType>int(11) unsigned|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>null</SequenceIdentity>
+    </column>
+    <column id="267" parent="238" name="nom">
       <Position>2</Position>
       <DataType>varchar(11)|0s</DataType>
     </column>
-    <key id="264" parent="237" name="PRIMARY">
+    <key id="268" parent="238" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>

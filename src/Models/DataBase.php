@@ -7,34 +7,25 @@ use PDOException;
 
 class DataBase
 {
-    private $servname;
-    private $username;
-    private $password;
-    private $dbname;
-    private $charset;
+    private const OPTIONS = [
+        PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC
+    ];
 
+    protected static $_pdo = null;
 
-    public function connect()
+    public static function getPdo()
     {
-        $this->servname = 'localhost';
-        $this->username = 'root';
-        $this->password = 'root';
-        $this->dbname = 'logitud';
-        $this->charset = 'utf8mb4';
-
-        try {
-            $dsn = "mysql:host=" . $this->servname . ";dbname=" . $this->dbname . ";charset=" . $this->charset;
-            return new PDO($dsn, $this->username, $this->password);
-        } catch (PDOException $e) {
-            echo $e->getMessage();
+        if (is_null(self::$_pdo)) {
+            try {
+                self::$_pdo  = new PDO('mysql:host=localhost;dbname=logitud;', 'root', 'root');
+            } catch (PDOException $e) {
+                die('Erreur : '.$e->getMessage());
+            }
         }
+        return self::$_pdo;
     }
 }
-/*try {
-    $db = new PDO('mysql:host=localhost;dbname=logitud', 'root', 'root');
-} catch (PDOException $e) {
-    echo $e->getMessage();
-}*/
+
 
 
 

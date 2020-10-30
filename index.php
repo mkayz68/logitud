@@ -17,10 +17,9 @@ require __DIR__.'/vendor/autoload.php';
 $request = Request::createFromGlobals();
 //dump($request);
 
-//
-
+// base de données
 $object = new DataBase;
-$object->connect();
+$object->getPdo();
 
 
 
@@ -56,6 +55,7 @@ switch ($routeInfo[0]) {
         $vars = $routeInfo[2];
         // ... call $handler with $vars
         $request->query->add($routeInfo[2]);
-        call_user_func_array($handler, [$request]);
+        $response = call_user_func_array($handler, [$request]);
+        $response->send();
         break;
 }
