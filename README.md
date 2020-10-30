@@ -7,3 +7,9 @@ sources utilisées : <br/>
     https://openclassrooms.com/forum/sujet/recuperer-la-date-et-l-heure-actuelle-au-format-datetime-82573
     
     https://getbootstrap.com/docs/4.5/components/dropdowns/#dropdown-options
+
+update commit 15h00
+sources utilisées : 
+https://www.youtube.com/watch?v=J3nfLrxsmro&t=439s
+https://www.youtube.com/watch?v=XhLAB1wwzNk
+https://www.youtube.com/watch?v=T41SMNgyRrc
