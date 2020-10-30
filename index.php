@@ -29,7 +29,8 @@ $dispatcher = FastRoute\simpleDispatcher(function(FastRoute\RouteCollector $r) {
     $r->addRoute('GET', '/Epreuve/{lieu}/{date}', [new EpreuvesController(), 'AddEpreuve']);
     $r->addRoute('GET', '/Epreuve', [new EpreuvesController(), 'AddEpreuve']);
     $r->addRoute('GET', '/Participant', [new ParticipantController(), 'addParticipant']);
-    $r->addRoute('POST', '/Participant', [new ParticipantController(), 'fetchParticipant']);
+    //$r->addRoute('POST', '/Participant', [new ParticipantController(), 'fetchParticipant']);
+    $r->addRoute('POST', '/Participant', [new ParticipantController(), 'add']);
     $r->addRoute('GET', '/Categorie', [new CategorieController(), 'addCategorie']);
     // {id} must be a number (\d+)
     //$r->addRoute('GET', '/user/{id:\d+}', 'get_user_handler');

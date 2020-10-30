@@ -20,22 +20,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c271015c-7517-4da0-b94b-511d067c7a5f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/testing.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/9563ec5d-89eb-4eba-aa14-184b7afb3611.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/9563ec5d-89eb-4eba-aa14-184b7afb3611.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/logitud.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/logitud.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/style.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/sass/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/sass/style.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controllers/EpreuvesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controllers/EpreuvesController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controllers/ParticipantController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controllers/ParticipantController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Categorie.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Categorie.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Participant.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Participant.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Profil.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Profil.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Models/DataBase.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Models/DataBase.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Models/EpreuveModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Models/EpreuveModel.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Models/ParticipantModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Models/ParticipantModel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Views/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Views/templates/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Views/templates/participant.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Views/templates/participant.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -172,7 +165,7 @@
       <workItem from="1603741259531" duration="2376000" />
       <workItem from="1603784086069" duration="16695000" />
       <workItem from="1603868135748" duration="15057000" />
-      <workItem from="1604042652442" duration="484000" />
+      <workItem from="1604042652442" duration="7770000" />
     </task>
     <servers />
   </component>

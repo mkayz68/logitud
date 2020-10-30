@@ -6,6 +6,7 @@ use App\Entity\Participant;
 use PDO;
 use Symfony\Component\HttpFoundation\Request;
 
+
 /**
  * @property PDO|null pdo
  */
@@ -40,18 +41,19 @@ class ParticipantModel extends DataBase {
 
     }*/
 
-    public function create($nom)
+    /*public function create($nom)
     {
         // enregister $nom dans la table partie
         $req = "INSERT INTO parti(nom) VALUE(?)";
         $st = $this->pdo->prepare($req);
         $st->execute([$nom]);
-    }
+    }*/
 
-    public function add($request)
+
+    public function add(Request $request)
     {
         $req = "INSERT INTO participant(nom, prenom, dateDeNaiss, mail, photo, profil_id, categorie_id) 
-                VALUE (?,?,?,?,?,?,?)";
+                VALUES (:nom, :prenom, :dateDeNaiss, :mail, :photo, :profil_id , :categorie_id)";
         $st = $this->pdo->prepare($req);
         $st->execute([$request]);
 
