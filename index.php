@@ -26,8 +26,9 @@ $object->getPdo();
 // MON ROUTER
 $dispatcher = FastRoute\simpleDispatcher(function(FastRoute\RouteCollector $r) {
     $r->addRoute('GET', '/Home', [new HomeController(), 'TwigTest']);
-    $r->addRoute('GET', '/Epreuve/{lieu}/{date}', [new EpreuvesController(), 'AddEpreuve']);
-    $r->addRoute('GET', '/Epreuve', [new EpreuvesController(), 'AddEpreuve']);
+    //$r->addRoute('GET', '/Epreuve/{lieu}/{date}', [new EpreuvesController(), 'AddEpreuve']);
+    $r->addRoute('GET', '/Epreuve', [new EpreuvesController(), 'addEpreuve']);
+    $r->addRoute('POST', 'Epreuve', [new EpreuvesController(), 'add']);
     $r->addRoute('GET', '/Participant', [new ParticipantController(), 'addParticipant']);
     //$r->addRoute('POST', '/Participant', [new ParticipantController(), 'fetchParticipant']);
     $r->addRoute('POST', '/Participant', [new ParticipantController(), 'add']);

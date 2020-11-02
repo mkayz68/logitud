@@ -26,10 +26,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c271015c-7517-4da0-b94b-511d067c7a5f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/9563ec5d-89eb-4eba-aa14-184b7afb3611.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/9563ec5d-89eb-4eba-aa14-184b7afb3611.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controllers/EpreuvesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controllers/EpreuvesController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controllers/ParticipantController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controllers/ParticipantController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Models/EpreuveModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Models/EpreuveModel.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Models/ParticipantModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Models/ParticipantModel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Views/templates/epreuves.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Views/templates/epreuves.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Views/templates/participant.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Views/templates/participant.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -168,7 +172,7 @@
       <workItem from="1603784086069" duration="16695000" />
       <workItem from="1603868135748" duration="15057000" />
       <workItem from="1604042652442" duration="10033000" />
-      <workItem from="1604304942390" duration="13281000" />
+      <workItem from="1604304942390" duration="17422000" />
     </task>
     <servers />
   </component>
@@ -204,10 +208,10 @@
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state x="530" y="245" key="#Inspections/0.0.1792.1120@0.0.1792.1120" timestamp="1604311445396" />
-    <state x="245" y="391" key="#SQL_Dialects" timestamp="1603875693858">
+    <state x="245" y="391" key="#SQL_Dialects" timestamp="1604329323642">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state x="245" y="391" key="#SQL_Dialects/0.0.1792.1120@0.0.1792.1120" timestamp="1603875693858" />
+    <state x="245" y="391" key="#SQL_Dialects/0.0.1792.1120@0.0.1792.1120" timestamp="1604329323642" />
     <state x="63" y="405" key="#SQL_Resolution_Scopes" timestamp="1603890652654">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
@@ -224,10 +228,10 @@
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state x="729" y="336" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1792.1120@0.0.1792.1120" timestamp="1603789274823" />
-    <state x="634" y="322" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1603984117963">
+    <state x="634" y="322" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1604329428950">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state x="634" y="322" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1792.1120@0.0.1792.1120" timestamp="1603984117963" />
+    <state x="634" y="322" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1792.1120@0.0.1792.1120" timestamp="1604329428950" />
     <state width="1750" height="313" key="GridCell.Tab.0.bottom" timestamp="1603868242968">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>

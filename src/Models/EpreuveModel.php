@@ -21,5 +21,12 @@ class EpreuveModel extends DataBase {
         $this->pdo = parent::getPdo();
     }
 
+    public function add(array $bdd)
+    {
+        $req = "INSERT INTO epreuve(lieu, date)
+            VALUES (?, ?)";
+        $st = $this->pdo->prepare($req);
+        $st->execute($bdd);
+    }
 
 }

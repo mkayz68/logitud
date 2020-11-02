@@ -3,6 +3,7 @@
   <component name="SqlDialectMappings">
     <file url="file://$PROJECT_DIR$/logitud.sql" dialect="GenericSQL" />
     <file url="file://$PROJECT_DIR$/src/Controllers/ParticipantController.php" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/src/Models/EpreuveModel.php" dialect="GenericSQL" />
     <file url="file://$PROJECT_DIR$/src/Models/ParticipantModel.php" dialect="MySQL" />
   </component>
 </project>

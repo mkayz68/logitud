@@ -14,6 +14,7 @@ use Symfony\Component\HttpFoundation\Response;
 class ParticipantController extends DataBase {
 
 
+    // cette méthode suis la route GET dans mon router
     public function addParticipant()
     {
         $twigtest = new ConfigTwig();
@@ -23,6 +24,8 @@ class ParticipantController extends DataBase {
 
     }
 
+
+    // cette méthode suis la route POST dans mon router
     public function add(Request $request) {
 
      $bdd = [
@@ -31,11 +34,12 @@ class ParticipantController extends DataBase {
             $request->get('prenom'),
             $request->get('dateDeNaiss'),
             $request->get('mail'),
-            null, 
-            $request->get('profil_id'),
-            $request->get('categorie_id')
+            null, // photo en null pour l'instant
+            1,//$request->get('profil_id'),
+            3//$request->get('categorie_id'),
+
         ];
-        //dump($request, $bdd);
+        //dd($request, $bdd);
         //die();
 
         /*$participant = new ParticipantModel();

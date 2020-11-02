@@ -1,32 +1,46 @@
 <?php
 
-
 namespace App\Controllers;
+
 use App\Models\DataBase;
 use App\Models\EpreuveModel;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 
 class EpreuvesController extends DataBase
 {
-    public function AddEpreuve(Request $request)
+
+
+    // methode GET
+//    public function AddEpreuve()
+//    {
+//        $twigtest = new ConfigTwig();
+//        return new Response($twigtest->twig->render('epreuves.html.twig'));
+//    }
+    public function addEpreuve()
     {
         $twigtest = new ConfigTwig();
-        echo $twigtest->twig->render('epreuves.html.twig');
-
+        return new Response($twigtest->twig->render('epreuves.html.twig'));
     }
 
-    public function add(Request $request) {
-        dump($request);
-        $compet = $request->get('lieu');
-        echo $compet;
+    // METHODE POST
+    public function add(Request $request)
+    {
+        $bdd = [
+            $request->get('lieu'),
+            $request->get('date')
+        ];
+        dd($request, $bdd);
 
         $epreuve = new EpreuveModel();
-        $epreuve->create($lieu);
+        $epreuve->add($bdd);
 
-        return new RedirectResponse('/Participant');
 
+
+        //return new RedirectResponse('/Epreuve');
     }
+
 
 
 

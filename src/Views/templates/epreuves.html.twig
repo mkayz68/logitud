@@ -3,7 +3,7 @@
 {% block title %}Epreuve{% endblock %}
 
 {% block body %}
-    <div class=" contenu container-fluid">
+   {# <div class=" contenu container-fluid">
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
@@ -15,32 +15,31 @@
                     </select>
                 </div>
                 <div class="col-md-6">
-                    <a href="#form_add_epreuve" ><button type="button" class="btn btn-success">Ajouter une épreuve</button></a>
+                    <a href="#" ><button type="button" class="btn btn-success">Ajouter une épreuve</button></a>
                 </div>
                 <div class="col-md-6">
-                <fieldset class="scheduler-border" id="form_add_epreuve">
-                    <legend class="scheduler-border">nom de l'épreuve</legend>
-                    <div class="control-group">
-                        <label class="control-label input-label label_epreuve" for="lieu">Lieu :</label>
-                        <div class="controls bootstrap-timepicker">
-                            <input type="text"  id="lieu" name="lieu" placeholder="Lieu de l'épreuve" />
-{#                            <i class="icon-time"></i>#}
-                        </div>
-                        <div class="control-group">
-                            <label class="control-label input-label label_epreuve" for="date">Date :
-                            </label>
-                            <div class="controls bootstrap-timepicker">
-                                <input type="date"  id="date" name="date" placeholder="Lieu de l'épreuve" />
-                                {# <i class="icon-time"></i>#}
-                            </div>
-                        </div>
-                    </div>
-                </fieldset>
+
                 </div>
                 <div class="col-md-6 ajoutParticipantButton">
-                    <a href="http://localhost:8000/Participant"><button type="button" class="btn btn-success">Ajouter un participant</button></a>
+                    <a href="#"><button type="button" class="btn btn-success">Ajouter un participant</button></a>
                 </div>
             </div><!-- /row -->
         </div>
-    </div>
+    </div>#}
+
+    <form method="post" action="">
+
+        <div class="form-group">
+            {#                    <label for="prenom"></label>#}
+            <input type="text" class="form-control" id="lieu" name="lieu" placeholder="Lieu Epreuve">
+        </div>
+
+        <div class="form-group">
+            {#                    <label for="prenom"></label>#}
+            <input type="date" class="form-control" id="date" name="date" placeholder="Date Epreuve">
+        </div>
+                <!-- submit -->
+                <button type="submit" name="submit" value="submit" class="btn btn-success">Enregister l'epreuve</button>
+
+    </form>
 {% endblock %}
