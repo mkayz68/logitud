@@ -18,11 +18,19 @@ class ParticipantModel extends DataBase {
     }
 
 
-    public function add(Request $request)
+    public function add( Request $request)
     {
         $req = "INSERT INTO participant(nom, prenom, dateDeNaiss, mail, photo, profil_id, categorie_id) 
-                VALUES (:nom, :prenom, :dateDeNaiss, :mail, :photo, :profil_id , :categorie_id)";
+                VALUES (?, ?, ?, ?, ?, ?, ?)";
         $st = $this->pdo->prepare($req);
-        $st->execute([$request]);
+        $st->execute($request);
     }
+
+//    public function add(array $bdd)
+//    {
+//        $req = "INSERT INTO participant(nom, prenom, dateDeNaiss, mail, photo, profil_id, categorie_id)
+//                VALUES (?, ?, ?, ?, ?, ?, ?)";
+//        $st = $this->pdo->prepare($req);
+//        $st->execute($$bdd);
+//    }
 }

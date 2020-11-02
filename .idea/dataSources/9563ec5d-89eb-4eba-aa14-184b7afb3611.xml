@@ -870,9 +870,9 @@ SELECT|sys.sys_config:null
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="260" parent="236" name="participant_ibfk_1">
+    <foreign-key id="260" parent="236" name="participant_ibfk_3">
       <ColNames>profil_id</ColNames>
-      <RefTableName>participant</RefTableName>
+      <RefTableName>profil</RefTableName>
       <RefColNames>id</RefColNames>
     </foreign-key>
     <foreign-key id="261" parent="236" name="participant_ibfk_2">

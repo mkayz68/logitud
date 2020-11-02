@@ -7,6 +7,9 @@ use App\Models\ParticipantModel;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
+//use Twig\Error\LoaderError;
+//use Twig\Error\RuntimeError;
+//use Twig\Error\SyntaxError;
 
 class ParticipantController extends DataBase {
 
@@ -15,30 +18,31 @@ class ParticipantController extends DataBase {
     {
         $twigtest = new ConfigTwig();
         //return new RedirectResponse('/Participant');
+
         return new Response($twigtest->twig->render('participant.html.twig'));
 
     }
-    /** @noinspection PhpUnreachableStatementInspection */
+
     public function add(Request $request) {
 
-        $bdd = [
-            'nom' => $request->get('nom'),
-            'prenom' => $request->get('prenom'),
-            'dateDeNaiss' => $request->get('dateDeNaiss'),
-            'mail' => $request->get('mail'),
-            //'photo' => $request->get('photo'),
-            'profil_id' => $request->get('profil_id'),
-            'categorie_id' => $request->get('categorie_id')
+     $bdd = [
+            // sens de la bdd
+            $request->get('nom'),
+            $request->get('prenom'),
+            $request->get('dateDeNaiss'),
+            $request->get('mail'),
+            null, 1,1
         ];
-        dd($request, $bdd);
-        die();
+        //dump($request, $bdd);
+        //die();
 
         /*$participant = new ParticipantModel();
         $participant->create($params);*/
 
         $participant = new ParticipantModel();
-        $participant->add($bdd);
+        $participant->add($request);
+        //dump($participant->add($request));
 
-        return new RedirectResponse('/Participant');
+        //return new RedirectResponse('/Participant');
     }
 }

@@ -13,7 +13,7 @@
             <!-- FORMULAIRE -->
             <form method="post" action="">
                 <div class="form-group">
-                    <label for="image">Ajouter une photo</label>
+{#                    <label for="image">Ajouter une photo</label>#}
                     <input type="file" class="form-control" name="photo" id="image1"> <!-- aria-describedby="emailHelp" -->
                     {#<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>#}
                 </div>
@@ -27,11 +27,11 @@
                 </div>
                 <div class="form-group">
                     {#                    <label for="prenom"></label>#}
-                    <input type="email" class="form-control" id="email" name="email" placeholder="Email du participant">
+                    <input type="email" class="form-control"  id="mail" name="mail" placeholder="Email du participant">
                 </div>
                 <div class="form-group">
-                    {#  <label for="date">Date de naissance</label> #}
-                    <input type="date" class="form-control" id="date" name="date" placeholder="Date" />
+{#                    <label for="date">Date de naissance</label>#}
+                    <input type="date" class="form-control" id="dateDeNaiss" name="dateDeNaiss" placeholder="Date" />
 
                 </div>
 
@@ -39,28 +39,28 @@
             <div class="division">
                 <h5>DIVISION</h5>
                 <div class="form-group form-check m1">
-                    <input type="checkbox" class="form-check-input" name="choix" id="m1">
-                    <label class="form-check-label" for="exampleCheck1">M1</label>
+                    <input type="checkbox" class="form-check-input" name="categorie_id" id="m1" value="m1">
+                    <label class="form-check-label" for="categorie_id">M1</label>
                 </div>
                 <div class="form-group form-check m2">
-                    <input type="checkbox" class="form-check-input" name="choix" id="m2">
-                    <label class="form-check-label" for="exampleCheck1">M2</label>
+                    <input type="checkbox" class="form-check-input" name="categorie_id" id="m2" value="m2">
+                    <label class="form-check-label" for="categorie_id">M2</label>
                 </div>
                 <div class="form-group form-check m3">
-                    <input type="checkbox" class="form-check-input" name="choix" id="m3">
-                    <label class="form-check-label" for="exampleCheck1">M3</label>
+                    <input type="checkbox" class="form-check-input" name="categorie_id" id="m3" value="m3">
+                    <label class="form-check-label" for="categorie_id">M3</label>
                 </div>
                 <div class="form-group form-check senior">
-                    <input type="checkbox" class="form-check-input" name="choix" id="senior">
-                    <label class="form-check-label" for="exampleCheck1">SENIOR</label>
+                    <input type="checkbox" class="form-check-input" name="categorie_id" id="senior" value="senior">
+                    <label class="form-check-label" for="categorie_id">SENIOR</label>
                 </div>
                 <div class="form-group form-check v">
-                    <input type="checkbox" class="form-check-input" name="choix" id="v">
-                    <label class="form-check-label" for="exampleCheck1">V</label>
+                    <input type="checkbox" class="form-check-input" name="categorie_id" id="v" value="v">
+                    <label class="form-check-label" for="categorie_id">V</label>
                 </div>
                 <div class="form-group form-check snow">
-                    <input type="checkbox" class="form-check-input" name="choix" id="snow">
-                    <label class="form-check-label" for="exampleCheck1">SNOW</label>
+                    <input type="checkbox" class="form-check-input" name="categorie_id" id="snow" value="snow">
+                    <label class="form-check-label" for="categorie_id">SNOW</label>
                 </div>
                 <a href="http://localhost:8000/Categorie">
                     <button type="button" class="btn btn-success">Ajouter une catégorie</button>
@@ -85,15 +85,15 @@
         <div class="profil">
                 <h5>PROFIL</h5>
                 <div class="form-group form-check">
-                    <input type="checkbox" class="form-check-input" name="choix1" id="asvp">
+                    <input type="checkbox" class="form-check-input" name="profil_id" id="asvp" value="asvp">
                     <label class="form-check-label" for="exampleCheck1">ASVP</label>
                 </div>
                 <div class="form-group form-check">
-                    <input type="checkbox" class="form-check-input" name="choix1" id="open">
+                    <input type="checkbox" class="form-check-input" name="profil_id" id="open" value="open">
                     <label class="form-check-label" for="exampleCheck1">OPEN</label>
                 </div>
                 <div class="form-group form-check">
-                    <input type="checkbox" class="form-check-input" name="choix1" id="garde">
+                    <input type="checkbox" class="form-check-input" name="profil_id" id="garde" value="garde">
                     <label class="form-check-label" for="exampleCheck1">GARDES-CHAMPETRES</label>
                 </div>
             </div>
