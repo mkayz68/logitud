@@ -16,7 +16,13 @@
         <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </expand>
-    <select />
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:master" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c271015c-7517-4da0-b94b-511d067c7a5f" name="Default Changelist" comment="">
@@ -162,7 +168,7 @@
       <workItem from="1603784086069" duration="16695000" />
       <workItem from="1603868135748" duration="15057000" />
       <workItem from="1604042652442" duration="10033000" />
-      <workItem from="1604304942390" duration="10292000" />
+      <workItem from="1604304942390" duration="13281000" />
     </task>
     <servers />
   </component>
@@ -174,7 +180,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>

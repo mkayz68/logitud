@@ -841,7 +841,7 @@ SELECT|sys.sys_config:null
     </column>
     <column id="253" parent="236" name="mail">
       <Position>5</Position>
-      <DataType>varchar(11)|0s</DataType>
+      <DataType>varchar(255)|0s</DataType>
     </column>
     <column id="254" parent="236" name="photo">
       <Position>6</Position>

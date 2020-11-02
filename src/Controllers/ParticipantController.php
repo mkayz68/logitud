@@ -31,7 +31,9 @@ class ParticipantController extends DataBase {
             $request->get('prenom'),
             $request->get('dateDeNaiss'),
             $request->get('mail'),
-            null, 1,1
+            null, 
+            $request->get('profil_id'),
+            $request->get('categorie_id')
         ];
         //dump($request, $bdd);
         //die();
@@ -40,9 +42,9 @@ class ParticipantController extends DataBase {
         $participant->create($params);*/
 
         $participant = new ParticipantModel();
-        $participant->add($request);
+        $participant->add($bdd);
         //dump($participant->add($request));
 
-        //return new RedirectResponse('/Participant');
+        return new RedirectResponse('/Participant');
     }
 }
